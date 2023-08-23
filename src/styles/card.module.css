@@ -1,0 +1,77 @@
+.card {
+  width: 25rem;
+  padding: .8rem;
+  border-radius: 1.8rem;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px var(--text2);
+}
+
+.image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.image img {
+  object-fit: cover;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .6rem 0;
+}
+
+.type_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .6rem;
+}
+
+.superhost {
+  width: fit-content;
+  border-radius: 1.6rem;
+  padding: .6rem;
+  border: 1px solid var(--text);
+}
+
+.superhost span {
+  color: var(--text);
+  font-size: .8rem;
+}
+
+.type {
+  font-size: .9rem;
+  color: var(--text2);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .4rem;
+}
+
+.rating img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.rating span {
+  font-size: .9rem;
+  color: var(--text);
+}
+
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-image: linear-gradient(to left, var(--text2), var(--text) 30%);
+  background-clip: text;
+  color: transparent;
+}

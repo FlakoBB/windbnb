@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #333;
+  --text2: #888;
+}
+
+html,
+body {
+  min-height: 100dvh;
+  background-color: #EEEEFF;
+}
