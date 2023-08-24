@@ -9,6 +9,7 @@
   --mainTransparent: #2960AB70;
   --text: #333;
   --text2: #888;
+  --bg: #EEEEFF;
 }
 
 ::-webkit-scrollbar {
@@ -26,10 +27,10 @@
 html,
 body {
   min-height: 100dvh;
-  background-color: #EEEEFF;
+  background-color: var(--bg);
   font-size: 16px;
 }
 
 body {
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
 }

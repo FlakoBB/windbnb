@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
+  min-height: calc(100dvh - 7rem);
+  padding: 1.5rem 0rem 2.5rem;
 }
 
 .header {

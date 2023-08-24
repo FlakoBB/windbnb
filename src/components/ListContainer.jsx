@@ -18,6 +18,9 @@ const ListContainer = () => {
         <Card />
         <Card />
         <Card />
+        <Card />
+        <Card />
+        <Card />
       </section>
     </main>
   )
