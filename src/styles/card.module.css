@@ -1,21 +1,18 @@
 .card {
-  width: 25rem;
-  padding: .8rem;
-  border-radius: 1.8rem;
+  min-width: 20rem;
   cursor: pointer;
-}
-
-.card:hover {
-  box-shadow: 0 0 10px var(--text2);
 }
 
 .image {
   width: 100%;
   overflow: hidden;
+  aspect-ratio: 100 / 68;
   border-radius: 1rem;
 }
 
 .image img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 

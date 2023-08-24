@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from '@styles/card.module.css'
 
+// ToDo: Get data from props
 const Card = () => {
   return (
     <article className={styles.card}>
@@ -9,6 +10,7 @@ const Card = () => {
       </figure>
       <div className={styles.header}>
         <div className={styles.type_container}>
+          {/* // ToDo: superhost is rendered when the superhost prop is true */}
           <div className={styles.superhost}><span>SUPER HOST</span></div>
           <p className={styles.type}>Propertie type</p>
         </div>
@@ -17,7 +19,7 @@ const Card = () => {
           <span>4.5</span>
         </div>
       </div>
-      <p className={styles.description}>Description of the propertie; Descripcion larga para ajustar el texto en una sola linea bla bla bla. No mero en dos lineas; así que debo escribir más xDxDxD</p>
+      <p className={styles.description}>Description of the propertieD</p>
     </article>
   )
 }

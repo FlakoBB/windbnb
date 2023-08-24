@@ -1,7 +1,7 @@
-import Card from '@/components/Card'
+import ListContainer from '@/components/ListContainer'
 
 export default function Home () {
   return (
-    <Card />
+    <ListContainer />
   )
 }
