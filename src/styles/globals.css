@@ -9,7 +9,8 @@
   --mainTransparent: #2960AB70;
   --text: #333;
   --text2: #888;
-  --bg: #EEEEFF;
+  /* --bg: #EEEEFF; */
+  --bg: #FFF;
 }
 
 ::-webkit-scrollbar {
@@ -18,6 +19,7 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--mainTransparent);
+  border-radius: .4rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {

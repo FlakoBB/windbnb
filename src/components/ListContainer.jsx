@@ -1,7 +1,7 @@
 import Card from './Card'
 import styles from '@styles/listContainer.module.css'
 
-const ListContainer = () => {
+const ListContainer = ({ list }) => {
   return (
     <main className={styles.main}>
       <header className={styles.header}>
@@ -11,16 +11,9 @@ const ListContainer = () => {
       </header>
       <section className={styles.list}>
         {/* // ToDo: map() array from props with all stays */}
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {
+          list.map((stay, index) => <Card key={index} data={stay} />)
+        }
       </section>
     </main>
   )
