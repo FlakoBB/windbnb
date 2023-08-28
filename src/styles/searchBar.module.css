@@ -1,0 +1,68 @@
+.container {
+  height: 3rem;
+  z-index: 1;
+}
+
+.searchBar {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1px;
+  height: 3rem;
+  border-radius: .8rem;
+  background-color: gainsboro;
+  box-shadow: 0 2px 8px 1px gainsboro;
+  overflow: hidden;
+}
+.searchBar__gen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.searchBar__city,
+.searchBar__guests {
+  width: 10rem;
+  cursor: pointer;
+}
+
+.searchBar__btn {
+  min-width: 4rem;
+}
+
+.searchBar__btn button {
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.drop {
+  display: none;
+  height: 20rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: .8rem;
+  box-shadow: 0 2px 8px 1px gainsboro;
+  background-color: #fff;
+}
+
+.dropSection {
+  background-color: azure;
+  height: 100%;
+}
+
+.citySection {
+  display: none;
+}
+
+.guestsSection {
+  display: none;
+}
+
+.open {
+  background-color: gainsboro;
+}

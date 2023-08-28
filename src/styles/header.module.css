@@ -15,22 +15,3 @@
   width: 100%;
   height: 100%;
 }
-
-.searchbar {
-  display: grid;
-  grid-template-columns: 40% 40% 20%;
-  gap: 1px;
-  height: 3rem;
-  min-width: 20rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px -2px var(--text2);
-  background-color: var(--text2);
-  overflow: hidden;
-}
-
-.searchbar div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--bg);
-}
