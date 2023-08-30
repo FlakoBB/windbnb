@@ -14,11 +14,13 @@
   box-shadow: 0 2px 8px 1px gainsboro;
   overflow: hidden;
 }
+
 .searchBar__gen {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
+  user-select: none;
 }
 
 .searchBar__city,
@@ -35,9 +37,18 @@
   min-width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: none;
+  background-color: var(--main);
   border: none;
   cursor: pointer;
+}
+
+.searchBar__btn button:hover {
+  transform: scale(110%);
+}
+
+.searchBar__btn button img {
+  width: 1rem;
+  height: auto;
 }
 
 .drop {
@@ -51,16 +62,117 @@
 }
 
 .dropSection {
-  background-color: azure;
   height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
 }
 
 .citySection {
   display: none;
 }
 
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.citySection ul {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: .6rem;
+  padding-inline: 2rem;
+  overflow-y: scroll;
+}
+
+.citySection ul li {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .2rem;
+  border-radius: .6rem;
+  list-style: none;
+  font-size: 1rem;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.citySection ul li:hover,
+.selectedCity {
+  background-color: gainsboro;
+}
+
+.citySection ul li img {
+  height: 1.1rem;
+  width: auto;
+}
+
 .guestsSection {
   display: none;
+  gap: 0;
+}
+
+.guestsSection .content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.counterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .5rem;
+}
+
+.counterType {
+  font-size: .9rem;
+  color: var(--text2);
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10rem;
+  padding: .6rem 1rem;
+}
+
+.counter button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.counter button:hover {
+  background-color: gainsboro;
+}
+
+.counter button img {
+  aspect-ratio: 1 / 1;
+  width: 1rem;
+  height: auto;
+}
+
+.counter span {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--main);
 }
 
 .open {
