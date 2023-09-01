@@ -3,9 +3,12 @@
 import Image from 'next/image'
 import styles from '@styles/header.module.css'
 import SearchBar from './SearchBar'
-// import { useState } from 'react'
+import { useState } from 'react'
 
-const Header = ({ setSelectedCity, cities }) => {
+const Header = ({ setSearchParams, cities }) => {
+  const [params, setParams] = useState({ city: '', guests: 0 })
+  setSearchParams(params)
+  // ToDo: Actualizar los searchParams
   // const [selectedCitys, setSelectedCitys] = useState(0)
 
   // const fff = () => {
@@ -18,7 +21,7 @@ const Header = ({ setSelectedCity, cities }) => {
       <figure className={styles.logo}>
         <Image src='/windbnb.svg' alt='Windbnb Logo' width='200' height='40' priority />
       </figure>
-      <SearchBar citiesList={cities} />
+      <SearchBar citiesList={cities} setParams={setParams} />
     </header>
   )
 }

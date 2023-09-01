@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from '@styles/searchBar.module.css'
 import { useEffect, useRef, useState } from 'react'
 
-const SearchBar = ({ citiesList }) => {
+const SearchBar = ({ citiesList, setParams }) => {
   const cityRef = useRef(null)
   const guestsRef = useRef(null)
   const dropRef = useRef(null)
@@ -17,8 +17,10 @@ const SearchBar = ({ citiesList }) => {
 
   const [selectedCity, setSelectedCity] = useState('')
 
+  const [newParams, setNewParams] = useState({ city: '', guests: 0 })
+
   const searchParams = () => {
-    console.log(`City: ${selectedCity} : Guests: ${totalGuests}`)
+    setNewParams({ city: selectedCity, guests: totalGuests })
 
     const city = cityRef.current
     const guests = guestsRef.current
@@ -31,6 +33,10 @@ const SearchBar = ({ citiesList }) => {
     guests.classList.remove(styles.open)
     guestsSection.style.display = 'none'
   }
+
+  useEffect(() => {
+    setParams(newParams)
+  }, [newParams])
 
   useEffect(() => {
     setTotalGuests(adultsGuests + childrenGuests)

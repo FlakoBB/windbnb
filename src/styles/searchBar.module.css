@@ -178,3 +178,22 @@
 .open {
   background-color: gainsboro;
 }
+
+
+@media (max-width: 424px) {
+  .container {
+    width: 100%;
+  }
+
+  .searchBar {
+    width: 100%;
+  }
+
+  .searchBar__gen {
+    width: 42%;
+  }
+
+  .searchBar__btn {
+    width: 16%;
+  }
+}

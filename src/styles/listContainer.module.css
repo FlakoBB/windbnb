@@ -18,6 +18,26 @@
 .list {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   gap: 2rem;
+}
+
+.errorCard {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.mainError {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.paragraphError {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text2);
 }

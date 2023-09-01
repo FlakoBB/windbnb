@@ -36,3 +36,10 @@ body {
 body {
   padding: 0rem 2rem;
 }
+
+@media (max-width: 1023px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
