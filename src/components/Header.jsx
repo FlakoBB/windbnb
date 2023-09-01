@@ -8,14 +8,6 @@ import { useState } from 'react'
 const Header = ({ setSearchParams, cities }) => {
   const [params, setParams] = useState({ city: '', guests: 0 })
   setSearchParams(params)
-  // ToDo: Actualizar los searchParams
-  // const [selectedCitys, setSelectedCitys] = useState(0)
-
-  // const fff = () => {
-  //   setSelectedCitys(selectedCitys + 1)
-  //   setSelectedCity(selectedCitys)
-  //   console.log(selectedCitys)
-  // }
   return (
     <header className={styles.header}>
       <figure className={styles.logo}>
