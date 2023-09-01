@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import styles from '@styles/card.module.css'
 
-// ToDo: Get data from props
 const Card = ({ data }) => {
   const { title, superHost, rating, type, photo } = data
 
@@ -12,7 +11,6 @@ const Card = ({ data }) => {
       </figure>
       <div className={styles.header}>
         <div className={styles.type_container}>
-          {/* // ToDo: superhost is rendered when the superhost prop is true */}
           {
             superHost && <div className={styles.superhost}><span>SUPER HOST</span></div>
           }

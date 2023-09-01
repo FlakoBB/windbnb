@@ -9,6 +9,7 @@ export default function Home () {
   const [originalList, setOriginalList] = useState([])
   const [selectedCity, setSelectedCity] = useState(0)
   const [renderedList, setRenderedList] = useState([])
+  const [cities, setCities] = useState([])
 
   useEffect(() => {
     fetch('/stays.json')
@@ -18,12 +19,15 @@ export default function Home () {
 
   useEffect(() => {
     setRenderedList(originalList)
+    const temporalList = originalList.map(stay => stay.city)
+    const citiesList = [...new Set(temporalList)]
+    setCities(citiesList)
     console.log(`page: ${selectedCity}`)
   }, [selectedCity, originalList])
 
   return (
     <>
-      <Header setSelectedCity={setSelectedCity} />
+      <Header setSelectedCity={setSelectedCity} cities={cities} />
       <ListContainer list={renderedList} />
       <Footer />
     </>

@@ -5,7 +5,7 @@ import styles from '@styles/header.module.css'
 import SearchBar from './SearchBar'
 // import { useState } from 'react'
 
-const Header = ({ setSelectedCity, citys }) => {
+const Header = ({ setSelectedCity, cities }) => {
   // const [selectedCitys, setSelectedCitys] = useState(0)
 
   // const fff = () => {
@@ -18,7 +18,7 @@ const Header = ({ setSelectedCity, citys }) => {
       <figure className={styles.logo}>
         <Image src='/windbnb.svg' alt='Windbnb Logo' width='200' height='40' priority />
       </figure>
-      <SearchBar />
+      <SearchBar citiesList={cities} />
     </header>
   )
 }

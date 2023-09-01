@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from '@styles/searchBar.module.css'
 import { useEffect, useRef, useState } from 'react'
 
-const SearchBar = () => {
+const SearchBar = ({ citiesList }) => {
   const cityRef = useRef(null)
   const guestsRef = useRef(null)
   const dropRef = useRef(null)
@@ -15,11 +15,26 @@ const SearchBar = () => {
   const [childrenGuests, setChildrenGuests] = useState(0)
   const [totalGuests, setTotalGuests] = useState(0)
 
+  const [selectedCity, setSelectedCity] = useState('')
+
+  const searchParams = () => {
+    console.log(`City: ${selectedCity} : Guests: ${totalGuests}`)
+
+    const city = cityRef.current
+    const guests = guestsRef.current
+    const drop = dropRef.current
+    const citySection = citySectionRef.current
+    const guestsSection = guestsSectionRef.current
+    city.classList.remove(styles.open)
+    drop.style.display = 'none'
+    citySection.style.display = 'none'
+    guests.classList.remove(styles.open)
+    guestsSection.style.display = 'none'
+  }
+
   useEffect(() => {
-    console.log(`Adults: ${adultsGuests}`)
-    console.log(`Children: ${childrenGuests}`)
-    console.log(`Total: ${totalGuests}`)
-  }, [totalGuests])
+    setTotalGuests(adultsGuests + childrenGuests)
+  }, [adultsGuests, childrenGuests])
 
   const handleDropdown = (button) => {
     const city = cityRef.current
@@ -64,10 +79,6 @@ const SearchBar = () => {
     }
   }
 
-  const [selectedCity, setSelectedCity] = useState(null)
-
-  const cities = ['citii1', 'cdmx', 'juarez', 'leon', 'Helsinki', 'NArnia', 'sopas', 'azucar', 'Azul', 'Aanarranja']
-
   return (
     <aside className={styles.container}>
       <div className={styles.searchBar}>
@@ -78,7 +89,7 @@ const SearchBar = () => {
           <span>Guests</span>
         </div>
         <div className={`${styles.searchBar__btn} ${styles.searchBar__gen}`}>
-          <button onClick={() => setTotalGuests(adultsGuests + childrenGuests)}>
+          <button onClick={searchParams}>
             <Image src='/magnifying.svg' alt='Magnifying Glass' width='20' height='20' />
           </button>
         </div>
@@ -88,8 +99,12 @@ const SearchBar = () => {
         <div ref={citySectionRef} className={`${styles.dropSection} ${styles.citySection}`}>
           <span className={styles.sectionTitle}>Select City</span>
           <ul>
+            <li onClick={() => setSelectedCity('')} className={selectedCity === '' ? styles.selectedCity : ''}>
+              <Image src='/locationDot.svg' alt='Location Dot Icon' width='20' height='20' />
+              Any City
+            </li>
             {
-              cities.map((city, index) => (
+              citiesList.map((city, index) => (
                 <li onClick={() => setSelectedCity(city)} className={selectedCity === city ? styles.selectedCity : ''} key={index}>
                   <Image src='/locationDot.svg' alt='Location Dot Icon' width='20' height='20' />
                   {city}

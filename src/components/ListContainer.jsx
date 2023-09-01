@@ -6,11 +6,9 @@ const ListContainer = ({ list }) => {
     <main className={styles.main}>
       <header className={styles.header}>
         <h2>Stays in Finland</h2>
-        {/* // ToDo: get num from props */}
-        <p>12 stays</p>
+        <p>{list.length} stays</p>
       </header>
       <section className={styles.list}>
-        {/* // ToDo: map() array from props with all stays */}
         {
           list.map((stay, index) => <Card key={index} data={stay} />)
         }
